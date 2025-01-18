@@ -19,7 +19,7 @@ const UnitePage: React.FC = () => {
 
   useEffect(() => {
     if (documentId) {
-      fetch(`http://localhost:1337/api/unites/${documentId}`)
+        fetch(`https://strapi-warhammer-production.up.railway.app/api/unites/${documentId}`)
         .then((res) => {
           if (!res.ok) {
             throw new Error('Unite not found');
