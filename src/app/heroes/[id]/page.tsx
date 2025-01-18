@@ -20,7 +20,7 @@ const HeroPage: React.FC = () => {
 
   useEffect(() => {
     if (documentId) {
-      fetch(`http://localhost:1337/api/heroes/${documentId}`)
+        fetch(`https://strapi-warhammer-production.up.railway.app/api/heroes/${documentId}`)
         .then((res) => {
           if (!res.ok) {
             throw new Error('Hero not found');
@@ -58,6 +58,7 @@ const HeroPage: React.FC = () => {
         <p key={index}>
           {desc.children.map((child, childIndex) => (
             <span key={childIndex}>{child.text}</span>
+            
           ))}
         </p>
       ))}

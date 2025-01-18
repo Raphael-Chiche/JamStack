@@ -9,7 +9,7 @@ interface Hero {
 }
 
 async function getHeroes(): Promise<{ data: Hero[] }> {
-  const res = await fetch("http://localhost:1337/api/heroes", {
+  const res = await fetch("https://strapi-warhammer-production.up.railway.app/api/heroes", {
     cache: "no-store",
   });
   if (!res.ok) throw new Error("Impossible de récupérer les héros");
